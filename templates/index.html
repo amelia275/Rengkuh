@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rengkuh - Teman Pendamping Refleksi untuk Perempuan Pengasuh</title>
+  <!-- Google Fonts - Nunito & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Quicksand:wght@500;700&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       LANDING PAGE (HOME)
+       ========================================== -->
+  <div id="screen-home" class="screen-view active">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">Rengkuh</span>
+      </div>
+      <nav class="navbar-links">
+        <a href="#screen-home">Ruang Cerita</a>
+        <a href="#" class="disabled">Ruang Rawat</a>
+        <a href="#" class="disabled">Ruang Dukungan</a>
+        <a href="#tentang-kami">Tentang</a>
+      </nav>
+      <button class="btn-login" id="btn-login-landing">Masuk</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">Merengkuh mereka yang merawat, agar mereka juga <span class="highlight">tetap
+          terawat.</span></h1>
+      <p class="hero-subtitle">AI companion yang membantu caregiver memahami kondisi keluarga sekaligus menjaga
+        kesehatan mentalnya.</p>
+
+      <!-- Welcome Alert Banner -->
+      <div class="welcome-alert">
+        <div class="welcome-text">
+          <strong>Apa kabarmu hari ini?</strong>
+          <span>Ceritakan apa yang sedang kamu rasakan saat ini</span>
+        </div>
+        <span class="status-badge"><span class="pulse-dot-green"></span> Rengkuh Siap Mendengar</span>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <div class="feature-grid">
+        <div class="feature-card active-card">
+          <div class="card-icon-wrapper">💬</div>
+          <h3>Ruang Cerita</h3>
+          <p>Curhat dengan teman pendamping yang mendengarkan tanpa menghakimi.</p>
+          <button class="btn btn-primary" id="btn-start-chat-1">Mulai Bercerita</button>
+        </div>
+
+        <div class="feature-card disabled-card">
+          <div class="card-icon-wrapper">📋</div>
+          <h3>Ruang Rawat</h3>
+          <p>Unggah hasil konsultasi dokter dan sistem akan menjelaskan secara sederhana.</p>
+          <button class="btn btn-secondary" disabled>Analisis Catatan (Segera Hadir)</button>
+        </div>
+
+        <div class="feature-card disabled-card">
+          <div class="card-icon-wrapper">👥</div>
+          <h3>Ruang Dukungan</h3>
+          <p>Temukan komunitas caregiver, layanan kesehatan, dan sumber belajar.</p>
+          <button class="btn btn-secondary" disabled>Cari Dukungan (Segera Hadir)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preview Obrolan Section -->
+    <section class="preview-section">
+      <div class="preview-container">
+        <div class="preview-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="preview-title">PREVIEW PERCAKAPAN</span>
+        </div>
+
+        <div class="preview-chat-body">
+          <div class="preview-msg msg-ai">
+            <span class="avatar-mini">🌿</span>
+            <p>Halo 😊 Terima kasih sudah datang. Silakan ceritakan apa yang sedang kamu rasakan hari ini.</p>
+          </div>
+          <div class="preview-msg msg-user">
+            <p>Hari ini saya merasa sangat lelah merawat orang tua saya...</p>
+            <span class="avatar-mini-user">🧑</span>
+          </div>
+          <div class="preview-msg msg-ai">
+            <span class="avatar-mini">🌿</span>
+            <p>Terima kasih sudah berbagi. Saya akan menemani kamu. Tidak perlu terburu-buru. Merasa lelah itu sangat
+              manusiawi setelah apa yang kamu lakukan seharian ini.</p>
+          </div>
+        </div>
+
+        <div class="preview-input-box">
+          <input type="text" placeholder="Ceritakan apa yang sedang Anda rasakan..." disabled>
+          <div class="preview-actions">
+            <span class="action-icon">🎙️</span>
+            <span class="action-icon">📎</span>
+            <button class="btn-start-action" id="btn-start-chat-2">✨ Mulai Bercerita</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang-kami" class="about-section">
+      <div class="about-content">
+        <span class="about-tag">TENTANG KAMI</span>
+        <h2>Dukungan Berbasis Empati</h2>
+        <p>Rengkuh bukan sekadar alat medis. Kami adalah pendamping emosional yang memahami beban yang Anda pikul setiap
+          harinya. Kami hadir untuk memastikan tidak ada pengasuh yang berjuang sendirian.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">70%</span>
+            <span class="stat-lbl">Caregiver Stres</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10K+</span>
+            <span class="stat-lbl">Terbantu</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="/static/assets/caregiver_illustration.jpg"
+          alt="Seorang anak perempuan memeluk ibunya yang duduk di kursi roda di taman yang hijau" class="about-photo">
+      </div>
+    </section>
+
+    <!-- Langkah Perjalanan -->
+    <section class="steps-section">
+      <h2>Langkah Memulai Perjalanan Anda</h2>
+      <div class="steps-grid">
+        <div class="step-item">
+          <span class="step-num">1</span>
+          <h4>Pilih Ruang</h4>
+          <p>Tentukan apakah ingin bercerita, mengecek medis, atau cari info.</p>
+        </div>
+        <div class="step-item">
+          <span class="step-num">2</span>
+          <h4>Masukkan Cerita</h4>
+          <p>Bisa lewat chat teks, rekaman suara, atau unggah foto dokumen.</p>
+        </div>
+        <div class="step-item">
+          <span class="step-num">3</span>
+          <h4>Pemahaman Empati</h4>
+          <p>Sistem pendamping kami menganalisis nada emosi dan keluh kesah Anda.</p>
+        </div>
+        <div class="step-item">
+          <span class="step-num">4</span>
+          <h4>Dukungan</h4>
+          <p>Dapatkan respons yang benar-benar personal sesuai kebutuhan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Rengkuh Berbeda -->
+    <section class="features-why">
+      <h2>Mengapa Rengkuh Berbeda?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-icon">🧑‍🤝‍🧑</span>
+          <h4>Teman Pendamping Personal</h4>
+          <p>Sistem pendamping yang dirancang khusus dengan literatur psikologi pengasuh di Indonesia.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🔒</span>
+          <h4>Aman & Privat</h4>
+          <p>Privasi Anda prioritas kami. Semua percakapan terenkripsi end-to-end.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🩺</span>
+          <h4>Pemahaman Medis</h4>
+          <p>Membedah istilah medis sulit menjadi panduan perawatan harian.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2>Pertanyaan Sering Diajukan</h2>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">Apakah data saya aman? <span class="faq-arrow">▼</span></div>
+          <div class="faq-answer">Ya, seluruh data percakapan Anda hanya disimpan pada memori browser Anda selama sesi
+            berlangsung dan tidak disimpan secara permanen.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Apakah Rengkuh bisa menggantikan Dokter? <span class="faq-arrow">▼</span></div>
+          <div class="faq-answer">Tidak. Rengkuh hanya merupakan pendamping emosional dan penyederhana informasi medis,
+            bukan pengganti konsultasi dengan dokter profesional.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <h3>Rengkuh</h3>
+        <p>Merangkul pengasuh dengan teknologi yang memanusiakan.</p>
+      </div>
+      <div class="footer-right">
+        <span>Ikuti Kami</span>
+        <div class="social-icon">🔗</div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Rengkuh. Dibuat dengan cinta untuk para pengasuh di Indonesia.
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================
+       RUANG CERITA SCREEN (3-PANEL STITCH UI)
+       ========================================== -->
+  <div id="screen-cerita" class="screen-view">
+    <div class="stitch-layout">
+      <!-- 1. LEFT SIDEBAR -->
+      <aside class="sidebar-left">
+        <button class="btn-back" id="btn-back-to-home">
+          <span class="arrow-left">←</span> Kembali ke Beranda
+        </button>
+
+        <div class="sidebar-brand">
+          <span class="brand-logo">🌿</span>
+          <span class="brand-name">Rengkuh</span>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item active">
+            <span class="menu-icon">📅</span> Hari Ini
+          </a>
+          <a href="#" class="menu-item disabled">
+            <span class="menu-icon">🗓️</span> Refleksi Sebelumnya
+          </a>
+          <a href="#" class="menu-item disabled">
+            <span class="menu-icon">📖</span> Jurnal Refleksi
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="profile-box">
+            <img src="/static/assets/user_avatar.jpg" alt="Foto Profil" class="profile-avatar">
+            <div class="profile-info">
+              <span class="profile-name">Yunita</span>
+              <span class="profile-title">Family Caregiver</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 2. MIDDLE CHAT PANEL -->
+      <main class="chat-panel">
+        <header class="chat-header">
+          <div class="header-left">
+            <h2>Ruang Cerita</h2>
+            <div class="header-status">
+              <span class="status-leaf">🌿</span> Rengkuh sedang menemani Anda
+            </div>
+          </div>
+          <div class="header-right">
+            <span class="badge-secure">🛡️ Ruang Aman & Terjaga</span>
+            <button class="btn-more">⋮</button>
+          </div>
+        </header>
+
+        <!-- Chat Logs Container -->
+        <div class="chat-messages" id="chat-logs-container">
+          <!-- Initial AI Welcome message -->
+          <div class="msg-group msg-group-ai">
+            <span class="msg-sender-lbl">🌿 Rengkuh</span>
+            <div class="msg-bubble">
+              Halo 👋 Saya siap mendengarkan tanpa menghakimi. Ceritakan apa yang sedang terjadi hari ini.
+              <span class="msg-time" id="initial-ai-time">10:02 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggestion Chips -->
+        <div class="suggestion-container" id="suggestion-chips-container">
+          <button class="suggestion-chip">Saya merasa lelah</button>
+          <button class="suggestion-chip">Saya ingin didengarkan</button>
+          <button class="suggestion-chip">Saya bingung harus bagaimana</button>
+        </div>
+
+        <!-- Input Box Area -->
+        <footer class="chat-input-footer">
+          <div class="chat-input-bar">
+            <button class="input-action-btn" title="Lampirkan berkas">📎</button>
+            <button class="input-action-btn" id="btn-voice-input" title="Rekam suara">🎙️</button>
+            <input type="text" id="chat-input-text" placeholder="Apa yang paling ingin kamu ceritakan hari ini?">
+            <button class="btn-send-message" id="btn-send-chat" title="Kirim pesan">
+              <span class="arrow-up">↑</span>
+            </button>
+          </div>
+          <p class="privacy-subtext">❤️ Curahan hati Anda aman dan bersifat rahasia.</p>
+        </footer>
+      </main>
+
+      <!-- 3. RIGHT REFLECTION PANEL -->
+      <aside class="sidebar-right">
+        <header class="reflection-header">
+          <span class="sparkle-icon">✨</span>
+          <h3>Ringkasan Refleksi</h3>
+        </header>
+
+        <!-- Reflection Cards (Populated Dynamically) -->
+        <div class="reflection-cards-wrapper" id="reflection-cards-container">
+          <!-- Placeholder state when not enough context -->
+          <div class="reflection-placeholder-state" id="reflection-placeholder-element">
+            <div class="placeholder-icon">✨</div>
+            <p>Tulis cerita Anda terlebih dahulu. Rengkuh akan menyusun ringkasan refleksi emosi dan saran praktis
+              secara otomatis setelah percakapan Anda berjalan cukup mendalam.</p>
+          </div>
+        </div>
+
+        <!-- Watermark bottom logo -->
+        <div class="right-sidebar-watermark">
+          <span class="watermark-graphic">🌿</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Settings Modal Overlay -->
+  <div id="settings-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <h3>Pengaturan Rengkuh</h3>
+      <div class="form-group" style="margin-top: 15px;">
+        <label for="settings-api-key"
+          style="font-weight: 700; font-size: 0.9rem; color: var(--color-text-secondary);">Gemini API Key:</label>
+        <input type="password" id="settings-api-key" placeholder="Masukkan kunci API (AIzaSy...)"
+          style="width: 100%; padding: 10px; margin-top: 8px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.95rem;">
+        <p style="font-size: 0.75rem; color: var(--color-text-secondary); margin-top: 6px;">Kunci API disimpan dengan
+          aman di penyimpanan browser lokal Anda (localStorage).</p>
+      </div>
+      <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="btn btn-secondary" id="btn-settings-close" style="width: auto; padding: 6px 16px;">Batal</button>
+        <button class="btn btn-primary" id="btn-settings-save" style="width: auto; padding: 6px 16px;">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- script.js -->
+  <script src="/static/js/script.js"></script>
+</body>
+
+</html>
